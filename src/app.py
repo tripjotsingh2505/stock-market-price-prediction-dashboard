@@ -33,17 +33,31 @@ st.set_page_config(
 # ============================================
 # DATA LOADING FUNCTION
 # ============================================
-@st.cache_data(ttl=3600)  # Har 1 ghante mein refresh
+@st.cache_data(ttl=3600)
 def load_data():
-    ticker = yf.Ticker("RELIANCE.NS")
-    df = ticker.history(
-        start="2010-01-01",
-        end=date.today().strftime("%Y-%m-%d")
-    )
-    df.index = df.index.tz_localize(None)
-    df = df.drop(columns=["Dividends", "Stock Splits"])
-    df = df[df['Volume'] > 0]
-    return df
+    try:
+        ticker = yf.Ticker("RELIANCE.NS")
+
+        df = ticker.history(
+            start="2010-01-01",
+            end=date.today().strftime("%Y-%m-%d")
+        )
+
+        if df.empty:
+            raise Exception("Empty dataframe")
+
+        df.reset_index(inplace=True)
+        return df
+
+    except Exception:
+        st.warning("Yahoo Finance rate limited. Loading local dataset.")
+
+        df = pd.read_csv("data/reliance_featured_data.csv")
+
+        if "Date" in df.columns:
+            df["Date"] = pd.to_datetime(df["Date"])
+
+        return df
 
 # ============================================
 # FEATURE ENGINEERING FUNCTION
