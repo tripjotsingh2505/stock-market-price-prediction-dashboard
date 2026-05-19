@@ -63,6 +63,8 @@ def load_data():
 # FEATURE ENGINEERING FUNCTION
 # ============================================
 def add_features(df):
+    df["Date"] = pd.to_datetime(df["Date"])
+    df = df.set_index("Date", drop = False)
     # Moving Averages
     df['MA_7']   = df['Close'].rolling(window=7).mean()
     df['MA_21']  = df['Close'].rolling(window=21).mean()
