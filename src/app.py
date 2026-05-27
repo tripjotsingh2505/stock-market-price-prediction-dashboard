@@ -773,7 +773,7 @@ def tab_overview(raw_df, df, start_date, end_date):
             height=300, bargap=0.1
         )
     st.plotly_chart(fig_v, use_container_width=True)
-    chart_help("Green bars indicate bullish days where price closed above the open; Red bars indicate bearish days. OBV (On-Balance Volume) tracks cumulative directional volume — a rising OBV alongside rising price confirms strong and sustained buying interest in the stock. Divergence between OBV and price is often an early warning sign of a potential trend reversal.")
+    chart_help("Green bars indicate bullish days where price closed above the open; Red bars indicate bearish days. OBV (On-Balance Volume) tracks cumulative directional volume — a rising OBV alongside rising price confirms strong buying interest in the stock. Divergence between OBV and price is often an early warning of a potential trend reversal.")
 
 
 # ============================================================
