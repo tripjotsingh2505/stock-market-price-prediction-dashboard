@@ -158,7 +158,7 @@ stock_prediction_project/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/tripjotsingh2505/stock-prediction.git
+git clone https://github.com/yourusername/stock-prediction.git
 cd stock-prediction
 
 # 2. Install dependencies
@@ -172,7 +172,7 @@ streamlit run src/app.py
 
 ## 📸 Dashboard Screenshots
 
-> *(Screenshots will be added after deployment)*
+> *(Add screenshots after deployment)*
 
 ---
 
@@ -184,10 +184,10 @@ streamlit run src/app.py
 
 ## 👨‍💻 Author
 
-**Tripjot Singh**
-- 🔗 LinkedIn: [Tripjot Singh](https://www.linkedin.com/in/tripjot-singh-7a75a0284)
-- 🐙 GitHub: [tripjotsingh2505](https://github.com/tripjotsingh2505)
-- 📧 Email: tripjotsingh25@gmail.com
+**Your Name**
+- 🔗 LinkedIn: [Your LinkedIn](#)
+- 🐙 GitHub: [Your GitHub](#)
+- 📧 Email: your.email@gmail.com
 
 ---
 
