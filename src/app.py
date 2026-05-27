@@ -712,7 +712,7 @@ def tab_overview(raw_df, df, start_date, end_date):
         xaxis_rangeslider_visible=False
     )
     st.plotly_chart(fig, use_container_width=True)
-    chart_help("Each candle represents one trading day — a Green body means the price closed higher than it opened, while a Red body means it closed lower. The upper and lower wicks extend to the day's High and Low extremes. MA50/MA200 crossovers are reliable trend-change signals, and Bollinger Bands highlight zones of expanding or contracting market volatility.")
+    chart_help("🕯️ Green candle = price rose that day, Red = price fell. Lines (MA) show the average price trend over time.")
 
     # ── Volume ──
     section_header("◈", "VOLUME ANALYSIS")
@@ -773,7 +773,7 @@ def tab_overview(raw_df, df, start_date, end_date):
             height=300, bargap=0.1
         )
     st.plotly_chart(fig_v, use_container_width=True)
-    chart_help("Green bars indicate bullish days where price closed above the open; Red bars indicate bearish days. OBV (On-Balance Volume) tracks cumulative directional volume — a rising OBV alongside rising price confirms strong buying interest in the stock. Divergence between OBV and price is often an early warning of a potential trend reversal.")
+    chart_help("📦 Bars show how many shares were traded each day. High volume = lots of interest. OBV line rising = more people buying than selling.")
 
 
 # ============================================================
@@ -833,7 +833,7 @@ def tab_technical(df, start_date, end_date):
         yaxis=rsi_yaxis
     )
     st.plotly_chart(fig_rsi, use_container_width=True)
-    chart_help("RSI measures momentum on a scale of 0–100. A reading above 70 signals the stock may be overbought and due for a pullback; below 30 suggests it is oversold and may be poised for recovery. RSI near 50 reflects neutral momentum with no strong directional bias. Traders often use RSI crossovers of these key levels as entry and exit signals.")
+    chart_help("📊 RSI measures if the stock is too expensive (above 70 = overbought) or too cheap (below 30 = oversold) right now.")
 
     # ── MACD ──
     section_header("◈", "MACD — MOMENTUM OSCILLATOR")
@@ -879,7 +879,7 @@ def tab_technical(df, start_date, end_date):
         height=380, bargap=0.1
     )
     st.plotly_chart(fig_macd, use_container_width=True)
-    chart_help("MACD measures the difference between the 12-day and 26-day exponential moving averages. When the MACD line crosses above the Signal line, it generates a bullish signal; crossing below generates a bearish signal. Green histogram bars reflect growing upside momentum, Red bars indicate increasing downside pressure.")
+    chart_help("📈 MACD crossing above the signal line = good time to buy. Crossing below = possible sell. Green bars = momentum building up.")
 
     # ── Bollinger Bands ──
     section_header("◈", "BOLLINGER BANDS — VOLATILITY TRACKER")
@@ -938,7 +938,7 @@ def tab_technical(df, start_date, end_date):
         height=400
     )
     st.plotly_chart(fig_bb, use_container_width=True)
-    chart_help("Bollinger Bands plot a 20-day moving average with Upper and Lower bands set 2 standard deviations apart. Price near the Upper Band may indicate overbought conditions; near the Lower Band suggests oversold territory. Narrow bands signal low volatility where a significant price breakout is likely approaching.")
+    chart_help("〰️ The two outer lines act like a price 'channel'. When price hits the top line it may be too high; bottom line = may be too low. Narrow channel = big move coming soon.")
 
     # ── Live Signal Box ──
     section_header("◈", "LIVE TRADING SIGNALS")
@@ -1056,7 +1056,7 @@ def tab_ml(df, raw_df, model_choice):
         height=420, hovermode='x unified'
     )
     st.plotly_chart(fig_pred, use_container_width=True)
-    chart_help(f"Blue line = actual closing prices. Red line = {model_name} predictions on the 20% holdout test set — data the model never saw during training. The closer the two lines track each other, the more accurate the model. The shaded band represents the ±MAE confidence range around each prediction.")
+    chart_help(f"🤖 Cyan line shows actual prices, Red line shows predicted prices. The shaded band shows error range; closer lines mean better prediction.")
 
     # ── Next Day Prediction ──
     section_header("◈", "NEXT TRADING DAY FORECAST")
@@ -1131,7 +1131,7 @@ def tab_ml(df, raw_df, model_choice):
         )
         st.plotly_chart(fig_hist, use_container_width=True)
 
-    chart_help("Residuals = Actual Price minus Predicted Price. A well-performing model shows residuals randomly scattered around zero with no systematic pattern. The histogram should approximate a normal bell curve, confirming that the model's prediction errors are statistically balanced and unbiased.")
+    chart_help("🔍 Shows the model's mistakes over time. Dots near zero = accurate. Bell-shaped histogram = errors are balanced, not biased.")
 
 
 # ============================================================
@@ -1227,7 +1227,7 @@ def tab_advanced(df, raw_df):
         height=500
     )
     st.plotly_chart(fig_fi, use_container_width=True)
-    chart_help("Feature importance ranks each input variable by how much it contributes to the model's predictions — longer bars indicate stronger influence. Lag features such as prior closing prices typically dominate because stock prices exhibit strong autocorrelation, making yesterday's price the most reliable predictor of tomorrow's movement.")
+    chart_help("🔑 Longer bars show the most important features that helped the model make predictions.")
 
     st.markdown("---")
 
@@ -1282,7 +1282,7 @@ def tab_advanced(df, raw_df):
         )
         st.plotly_chart(fig_vol, use_container_width=True)
 
-    chart_help("Left: Daily return distribution overlaid with a normal curve — fatter tails indicate Reliance experiences more extreme price moves than standard theory predicts, a common trait in equity markets. Right: 30-day rolling annualised volatility — sharp spikes correspond to periods of heightened uncertainty such as the COVID-19 market crash.")
+    chart_help("📉 The returns chart shows how often small or large price moves happen. The volatility chart shows risk levels, where a higher line means a more uncertain period.")
 
     st.markdown("---")
 
@@ -1330,7 +1330,7 @@ def tab_advanced(df, raw_df):
         )
         st.plotly_chart(fig_day, use_container_width=True)
 
-    chart_help("Seasonal patterns derived from 16 years of Reliance trading data. The monthly chart identifies which calendar months have historically delivered the strongest or weakest average returns. The day-of-week chart reveals whether certain trading days consistently outperform or underperform across the full dataset.")
+    chart_help("📅 Green bars show profitable months or weekdays on average. Win Rate above 50% means the stock moved up more often than down.")
 
     st.markdown("---")
 
@@ -1378,7 +1378,7 @@ def tab_advanced(df, raw_df):
         height=300
     )
     st.plotly_chart(fig_dd, use_container_width=True)
-    chart_help("Drawdown tracks the percentage decline from the most recent peak, revealing the worst losing periods in Reliance's history. Sharpe Ratio measures risk-adjusted return — above 1.0 is good, above 2.0 is excellent. VaR 95% is the maximum daily loss expected on 95% of trading days; CVaR captures the average loss on the worst 5% of days.")
+    chart_help("📉 Drawdown shows how much the stock fell from its highest point during the selected period. A deeper dip means investors faced a larger loss.")
 
     st.markdown("---")
 
@@ -1411,7 +1411,7 @@ def tab_advanced(df, raw_df):
         textfont=dict(family="IBM Plex Mono", size=9, color="#00D4FF")
     )
     st.plotly_chart(fig_heat, use_container_width=True)
-    chart_help("Each cell shows the average daily return for a specific year-month combination from 2015 to present. Deep green cells mark historically strong months; red cells highlight weaker or negative periods. Reading across rows reveals year-specific trends, while reading down columns exposes consistent seasonal patterns in Reliance's price behaviour.")
+    chart_help("🟩 Green cells show strong months, while Red cells show weaker months. This helps identify Reliance’s historical performance trends.")
 
 
 # ============================================================
