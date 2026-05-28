@@ -44,7 +44,7 @@
 ## 🎯 Problem Statement
 
 > Stock markets are volatile and hard to predict.
-> This project builds an **end-to-end ML pipeline** that forecasts 'Reliance Industries' next-day closing price — trained on 16 years of live data with 30+ engineered features.
+> This project builds an **end-to-end ML pipeline** that forecasts Reliance Industries' next-day closing price — trained on 16 years of live data with 30+ engineered features.
 
 ---
 
@@ -110,7 +110,7 @@ Three models were trained and rigorously evaluated on the same 20% hold-out test
 | 🥈 | XGBoost (Tuned) | 0.9489 | ₹20.50 | ₹16.20 | 1.14% |
 | 🥉 | Random Forest | 0.9248 | ₹24.86 | ₹19.63 | 1.39% |
 
-> 💡 **Why Ridge Regression won?** Reliance stock follows a predominantly linear long-term trend. Ridge's L2 regularisation prevents overfitting while maintaining high accuracy — outperforming complex tree-based models on this dataset.
+> 💡 **Why Ridge Regression won?** Reliance follows a largely linear long-term trend — Ridge's L2 regularisation prevents overfitting, giving it an edge over complex tree-based models.
 
 ---
 
