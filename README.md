@@ -132,7 +132,7 @@ Price Features     →  Daily Return · Price Range · Price Change
 
 ## 🖥️ Dashboard — 4 Tabs
 
-Built with Streamlit and a custom **Midnight Blue terminal theme**. All charts are Plotly-powered — fully interactive with zoom, pan, and hover tooltips.
+Built with Streamlit and a custom **Midnight Blue terminal theme** designed to look and feel like a professional trading terminal. All charts are Plotly-powered — fully interactive with zoom, pan, hover tooltips, and date range filtering.
 
 | Tab | Features |
 |-----|---------|
