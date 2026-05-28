@@ -101,6 +101,8 @@ flowchart LR
 
 ## 🤖 ML Model Performance
 
+Three models were trained and rigorously evaluated on the same 20% hold-out test set — no data leakage, no look-ahead bias. All metrics are computed on **unseen data only**, ensuring real-world reliability of the reported scores.
+
 | Rank | Model | R² Score | RMSE | MAE | MAPE |
 |:----:|-------|:--------:|:----:|:---:|:----:|
 | 🥇 | **Ridge Regression** | **0.9567** | **₹18.87** | **₹14.10** | **1.00%** |
@@ -112,6 +114,8 @@ flowchart LR
 ---
 
 ## ⚙️ Feature Engineering — 30+ Technical Indicators
+
+Raw OHLCV data alone is a poor predictor — the real signal lives in *derived* features. Every indicator below was computed from scratch using Pandas and NumPy (no TA-Lib dependency), keeping the pipeline fully transparent and portable. Features span multiple timeframes, capturing short-term momentum, medium-term trend, and long-term price memory simultaneously.
 
 ```
 Moving Averages    →  MA7 · MA21 · MA50 · MA200
@@ -128,6 +132,8 @@ Price Features     →  Daily Return · Price Range · Price Change
 
 ## 🖥️ Dashboard — 4 Tabs
 
+Built with Streamlit and a custom **Midnight Blue terminal theme**, the dashboard is designed for both analysts and recruiters — intuitive enough to explore in 5 minutes, deep enough to hold up under technical scrutiny. All charts are Plotly-powered and fully interactive (zoom, pan, hover tooltips).
+
 | Tab | Features |
 |-----|---------|
 | **◈ Overview** | Live KPIs · Candlestick / Line chart · Volume & OBV · Buy/Sell Signals |
@@ -138,6 +144,8 @@ Price Features     →  Daily Return · Price Range · Price Change
 ---
 
 ## 💡 Key Business Insights
+
+Beyond model accuracy, the project surfaces **actionable market intelligence** extracted from 16 years of Reliance data — patterns that matter to both traders and data scientists.
 
 | # | Insight |
 |---|---------|
@@ -152,6 +160,8 @@ Price Features     →  Daily Return · Price Range · Price Change
 ---
 
 ## 📁 Project Structure
+
+The repository follows a clean, **notebook-first day-by-day workflow** — each notebook represents one focused stage of the DS pipeline, making it easy to follow the project end-to-end or jump straight to any specific phase.
 
 ```
 Stock Market Price Prediction & Analysis System/
@@ -192,6 +202,8 @@ Stock Market Price Prediction & Analysis System/
 
 ## 🚀 How to Run Locally
 
+No complicated setup — three commands and you're live. The app auto-fetches the latest Reliance data from Yahoo Finance on every launch, so your predictions are always current.
+
 ```bash
 # 1. Clone the repository
 git clone https://github.com/tripjotsingh2505/stock-market-price-prediction.git
@@ -210,7 +222,7 @@ streamlit run src/app.py
 
 ## 🌐 Deployment
 
-Deployed on **Render** as a persistent web service — no sleep mode, always live.
+Deployed on **Render** as a persistent web service — no sleep mode, always live. The configuration is minimal by design: three files are all it takes to go from local notebook to a publicly accessible production dashboard.
 
 | File | Purpose |
 |------|---------|
