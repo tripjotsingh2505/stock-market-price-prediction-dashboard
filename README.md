@@ -43,8 +43,8 @@
 
 ## 🎯 Problem Statement
 
-> Stock markets are inherently volatile and hard to predict with precision.
-> This project builds a **production-ready, end-to-end ML pipeline** that forecasts Reliance Industries' next-day closing price — trained on 16 years of live OHLCV data with 30+ engineered features.
+> Stock markets are volatile and hard to predict.
+> This project builds an **end-to-end ML pipeline** that forecasts Reliance Industries' next-day closing price — trained on 16 years of live data with 30+ engineered features.
 
 ---
 
