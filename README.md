@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&weight=600&size=28&pause=1000&color=00D4FF&center=true&vCenter=true&width=700&lines=Reliance+Stock+Intelligence+Terminal;Live+ML-Powered+Price+Prediction;End-to-End+Data+Science+Pipeline" alt="Typing SVG" />
+<img src="https://readme-typing-svg.demolab.com?font=IBM+Plex+Mono&weight=700&size=30&pause=1000&color=00D4FF&center=true&vCenter=true&width=750&lines=RELIANCE+STOCK+INTELLIGENCE+TERMINAL;LIVE+ML-POWERED+PRICE+PREDICTION;END-TO-END+DATA+SCIENCE+PIPELINE" alt="Typing SVG" />
 
 <br/>
 
@@ -19,7 +19,7 @@
 
 <br/>
 
-🚀 **[View Live Dashboard](#)** &nbsp;&nbsp;|&nbsp;&nbsp; 📓 **[Explore Notebooks](notebooks/)** &nbsp;&nbsp;|&nbsp;&nbsp; ⭐ **Star this repo if you found it useful!**
+🚀 **[VIEW LIVE DASHBOARD](https://stock-market-price-prediction-dashboard-hrra.onrender.com/)** &nbsp;&nbsp;|&nbsp;&nbsp; 📓 **[EXPLORE NOTEBOOKS](notebooks/)** &nbsp;&nbsp;|&nbsp;&nbsp; ⭐ **STAR THIS REPO IF YOU FOUND IT USEFUL!**
 
 </div>
 
@@ -50,24 +50,36 @@
 ## 🏗️ Project Architecture
 
 ```mermaid
-flowchart TD
-    A[📥 Yahoo Finance API\nLive OHLCV — 2010 to Today] --> B[🧹 Data Cleaning\nMissing values · Duplicates · Timezone fix]
-    B --> C[🔍 EDA\nTrends · Seasonality · Volume · Return Analysis]
-    C --> D[⚙️ Feature Engineering\n30+ Technical Indicators]
-    D --> E[🔄 Preprocessing\nMinMax Scaling · Train/Test Split 80/20]
-    E --> F1[🔵 Ridge Regression\nR² 0.9567 · MAPE 1.00%]
-    E --> F2[🟠 Random Forest\nR² 0.9248 · MAPE 1.39%]
-    E --> F3[🟣 XGBoost Tuned\nR² 0.9489 · MAPE 1.14%]
-    F1 --> G[📊 Model Evaluation\nRMSE · MAE · R² · MAPE · Residuals]
-    F2 --> G
-    F3 --> G
-    G --> H[🚀 Live Streamlit Dashboard\nDeployed on Render]
+flowchart LR
+    A["📥 DATA INGESTION\n──────────────\nYahoo Finance API\nLive OHLCV 2010→Today"]
+    B["🧹 DATA CLEANING\n──────────────\nMissing Values\nDuplicates · Timezone"]
+    C["🔍 EDA\n──────────────\nTrends · Seasonality\nVolume · Returns"]
+    D["⚙️ FEATURE ENGINEERING\n──────────────\n30+ Technical\nIndicators"]
+    E["🔄 PREPROCESSING\n──────────────\nMinMax Scaling\nTrain/Test 80/20"]
 
-    style A fill:#0A0E1A,color:#00D4FF,stroke:#00D4FF
-    style H fill:#0A0E1A,color:#00FF88,stroke:#00FF88
-    style F1 fill:#0A0E1A,color:#00D4FF,stroke:#00D4FF
-    style F2 fill:#0A0E1A,color:#FF6B35,stroke:#FF6B35
-    style F3 fill:#0A0E1A,color:#A855F7,stroke:#A855F7
+    F1["🥇 RIDGE REGRESSION\n──────────────\nR² 0.9567\nMAPE 1.00%"]
+    F2["🥈 RANDOM FOREST\n──────────────\nR² 0.9248\nMAPE 1.39%"]
+    F3["🥉 XGBOOST TUNED\n──────────────\nR² 0.9489\nMAPE 1.14%"]
+
+    G["📊 MODEL EVALUATION\n──────────────\nRMSE · MAE · R²\nMAPE · Residuals"]
+    H["🚀 LIVE DASHBOARD\n──────────────\nStreamlit on Render\nReal-Time Predictions"]
+
+    A --> B --> C --> D --> E
+    E --> F1 --> G
+    E --> F2 --> G
+    E --> F3 --> G
+    G --> H
+
+    style A fill:#0D1B2A,color:#00D4FF,stroke:#00D4FF,stroke-width:2px
+    style B fill:#0D1B2A,color:#00D4FF,stroke:#00D4FF,stroke-width:2px
+    style C fill:#0D1B2A,color:#00D4FF,stroke:#00D4FF,stroke-width:2px
+    style D fill:#0D1B2A,color:#00D4FF,stroke:#00D4FF,stroke-width:2px
+    style E fill:#0D1B2A,color:#00D4FF,stroke:#00D4FF,stroke-width:2px
+    style F1 fill:#0D1B2A,color:#00FF88,stroke:#00FF88,stroke-width:2px
+    style F2 fill:#0D1B2A,color:#FF6B35,stroke:#FF6B35,stroke-width:2px
+    style F3 fill:#0D1B2A,color:#A855F7,stroke:#A855F7,stroke-width:2px
+    style G fill:#0D1B2A,color:#00D4FF,stroke:#00D4FF,stroke-width:2px
+    style H fill:#0D1B2A,color:#00FF88,stroke:#00FF88,stroke-width:2px
 ```
 
 ---
@@ -216,13 +228,13 @@ Deployed on **Render** as a persistent web service — no sleep mode, always liv
 
 <div align="center">
 
-## 👨‍💻 Author
+## 👨‍💻 AUTHOR
 
-**Tripjot Singh**
+<h2><b>TRIPJOT SINGH</b></h2>
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Tripjot%20Singh-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tripjot-singh-7a75a0284)
-[![GitHub](https://img.shields.io/badge/GitHub-tripjotsingh2505-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tripjotsingh2505)
-[![Email](https://img.shields.io/badge/Email-tripjotsingh25%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tripjotsingh25@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-TRIPJOT%20SINGH-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/tripjot-singh-7a75a0284)
+[![GitHub](https://img.shields.io/badge/GitHub-TRIPJOTSINGH2505-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/tripjotsingh2505)
+[![Email](https://img.shields.io/badge/Email-TRIPJOTSINGH25%40GMAIL.COM-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:tripjotsingh25@gmail.com)
 
 <br/>
 
@@ -230,6 +242,8 @@ Deployed on **Render** as a persistent web service — no sleep mode, always liv
 
 *Built with 🤍 using Python · Streamlit · Machine Learning · Yahoo Finance API*
 
-⭐ **If this project helped you, please consider giving it a star!** ⭐
+<br/>
+
+⭐ **IF THIS PROJECT HELPED YOU, PLEASE CONSIDER GIVING IT A STAR!** ⭐
 
 </div>
