@@ -162,7 +162,7 @@ Key patterns surfaced from 16 years of Reliance data:
 
 ## 📁 Project Structure
 
-A clean **notebook-first workflow** — each notebook covers one stage of the DS pipeline, easy to follow end-to-end or jump to any phase.
+A clean **notebook-first, day-by-day workflow** — each notebook covers exactly one focused stage of the DS pipeline, making it easy to follow the full journey end-to-end or jump straight to any specific phase.
 
 ```
 Stock Market Price Prediction & Analysis System/
